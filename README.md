@@ -40,12 +40,17 @@ $_REQUEST = array(
 );
 
 
-
+#Files
  framework.php is the first file to load the whole framework
+ 
  .htaccess my main site config file
+ 
  Data layer/Security contains my files and libs for data security classes
+ 
  Data Layer/DMining contains my classes for data mining
+ 
  Data Layer/Compression contains my custom compression algorithms
+ 
  Data Layer/DBManager contains my custom db and rss mapper
 
 # Architecture
