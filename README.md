@@ -39,4 +39,9 @@ $_REQUEST = array(
         "services" => "Rss",
 );
 
+# Architecture
+visit 
+https://www.oreilly.com/ideas/software-architecture-patterns/page/2/layered-architecture
+http://www.guidanceshare.com/wiki/Application_Architecture_Guide_-_Chapter_9_-_Layers_and_Tiers
+to get insight on its architecture and its layers implementation
 
