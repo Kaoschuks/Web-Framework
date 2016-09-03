@@ -117,25 +117,4 @@ define("FB_SITE_NAME", "");
         "POST" => array("Register", "Login", "Create_File", "Create_Feed", "Delete_Feed", "Update_Feed", "Create_Users", "Delete_Users", "Update_Users", "Create_Post", "Delete_Post", "Update_Post", "Add_Comment", "Delete_Comment", "Update_Comment"),
         "GET" => array("View_Feed", "View_Users", "View_All_Users", "View_All_Post", "View_Post", "View_All_Comment", "shareCount", "generateSiteMap", "webRanking"),
     );
-    
-     
-    public $auths = array(
-		"base_url" => "http://localhost/framework/",
-		"Yahoo" => array(
-		    "key" => "", 
-            "secret" => ""
-        ),
-		"Google" => array(
-		  "id" => "", 
-          "secret" => ""
-        ),
-		"Facebook" => array(
-		  "id" => '1814432112124565', 
-          "secret" => "7a7fabfc9a44b8f570274d0c6ebc5644"
-        ),
-		"Twitter" => array(
-		  "key" => "", 
-          "secret" => ""
-        ),
-    );
 }
