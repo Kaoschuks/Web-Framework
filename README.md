@@ -40,6 +40,16 @@ $_REQUEST = array(
 );
 
 # Architecture
+
+framework.php is the first file to load the whole framework
+htaccess my main site config file
+Data layer/Security contains my files and libs for data security classes
+Data Layer/DMining contains my classes for data mining
+Data Layer/Compression contains my custom compression algorithms
+Data Layer/DBManager contains my custom db and rss mapper
+Service Layer/Security/  contains my services security classes
+
+
 visit 
 https://www.oreilly.com/ideas/software-architecture-patterns/page/2/layered-architecture
 http://www.guidanceshare.com/wiki/Application_Architecture_Guide_-_Chapter_9_-_Layers_and_Tiers
