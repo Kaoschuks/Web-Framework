@@ -1,0 +1,8 @@
+        
+        <!-- Javascripts -->
+        <?php
+            require_once 'Presentation Layer/Interface/Traits/Script';
+        ?>
+
+    </body>
+</html>

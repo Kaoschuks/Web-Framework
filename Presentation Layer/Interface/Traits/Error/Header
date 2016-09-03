@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo $_GET['description']; ?>">
+    <meta name="author" content="<?php echo AUTHOR; ?>">
+    <meta name="copyright" content="<?php echo COYPRIGHT ?>" />
+    <meta name="application-name" content="<?php echo APP_NAME; ?>" />
+    <link rel="shortcut icon" href="<?php echo SHORT_ICON ?>">
+    <meta name="robots" content="noindex,nofollow">
+      
+    <title><?php echo $type ?> - <?php echo $msg; ?> </title>
+      
+    <!-- CACHE -->
+    <meta http-equiv="Cache-control" content="Private">
+    <meta http-equiv="Cache-control" content="no-Cache">
+      
+    <!--meta http-equiv="refresh" content="30; URL=" -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    
+    <!-- Styles -->
+    <?php
+        ob_start();
+        print eval('?>'.file_get_contents('Presentation Layer/Interface/Traits/Css', TRUE));
+        $css = ob_get_contents();
+        ob_end_clean();
+        echo $css;
+    ?>
+ </head>
+    
+ <body data-page="<?php echo $_GET['uri']; ?>">

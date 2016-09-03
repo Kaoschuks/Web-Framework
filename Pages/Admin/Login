@@ -1,0 +1,6 @@
+<div class="error"></div>
+<form enctype="multipart/form-data">
+<input type="text" placeholder="Username" name="uname" required/>
+<input type="password" placeholder="Password" name="passwd" required/>
+<button type="button" id="func" data-function="Login">Login</button>
+</form>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?php echo $_GET['description']; ?>">
+    <meta name="author" content="<?php echo AUTHOR; ?>">
+    <meta name="copyright" content="<?php echo COYPRIGHT ?>" />
+    <meta name="application-name" content="<?php echo APP_NAME; ?>" />
+    <link rel="shortcut icon" href="<?php echo SHORT_ICON ?>">
+    <meta name="robots" content="noindex,nofollow">
+      
+    <title><?php echo $_GET['uri']; ?> - <?php echo $_ENV['tag']; ?> </title>
+      
+    <!-- CACHE -->
+    <meta http-equiv="Cache-control" content="Private">
+    <meta http-equiv="Cache-control" content="no-Cache">
+      
+    <!-- Google Plus -->
+    <link rel="canonical" href="<?php echo GOOGLE_PUBLISHER_URL ?>" />
+    <link rel="author" href="<?php echo GOOGLE_AUTHOR ?>" />
+    <link rel=”publisher” href=”<?php echo GOOGLE_PAGE ?>”/>
+
+    <!-- for Facebook -->          
+    <meta property="og:description" content="<?php echo FB_DESCRIPTION ?>" />
+    <meta property="og:type" content="<?php echo FB_TYPE ?>" />
+    <meta property="og:title" content="<?php echo FB_TITLE ?>" />
+    <meta property="og:image" content="<?php echo FB_IMAGE ?>" />
+    <meta property="og:image:secure_url" content="<?php echo FB_SECURE_IMAGE ?>" />
+    <meta property="og:url" content="<?php echo FB_URL ?>" />
+    <meta property="og:site_name" content="<?php echo FB_SITE_NAME ?>" />
+    <meta property="fb:admins" content="<?php echo FB_ADMIN ?>" />
+      
+      
+    <!-- Schema.org markup for Google+ -->
+    <meta itemscope itemtype="http://schema.org/<?php echo FB_TYPE ?>">
+    <meta itemprop="name" content="<?php echo GOOGLE_NAME ?>">
+    <meta itemprop="description" content="<?php echo FB_DESCRIPTION ?>">
+    <meta itemprop="image" content="<?php echo GOOGLE_IMAGE ?>">
+      
+    <!--meta http-equiv="refresh" content="30; URL=" -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    
+    <!-- Styles -->
+    <?php
+        ob_start();
+        print eval('?>'.file_get_contents('Presentation Layer/Interface/Traits/Css', TRUE));
+        $css = ob_get_contents();
+        ob_end_clean();
+        echo $css;
+    ?>
+ </head>
+    
+ <body data-page="<?php echo $services; ?>">

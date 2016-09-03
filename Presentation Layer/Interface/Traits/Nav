@@ -1,0 +1,6 @@
+        
+        <ul>
+			<li><a href="http://localhost/framework/" data-page="Home"> Home interface</a></li>
+			<li><a href="http://localhost/framework/Blog/Technology" data-page="Blog-Categories">Blog Categories</a></li>
+		</ul>
+        <div id="content"></div>

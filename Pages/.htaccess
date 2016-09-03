@@ -1,0 +1,39 @@
+#Deny from all
+#Allow from 127.0.0.1
+
+<LimitExcept GET>
+    Order allow,deny
+</LimitExcept>
+
+# ----------------------------------------------------------------------
+# Cross-domain AJAX requests, ENABLE CSRF first (see above)
+# ----------------------------------------------------------------------
+# Serve cross-domain Ajax requests, disabled by default. Enable-cors.org
+# code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin localhost
+  </IfModule>
+  
+AuthType Basic
+AuthName "Secure Area"
+Require valid-user
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+Allow from ::1
+Satisfy Any
+  
+  
+<ifModule mod_headers.c>
+    Header set X-Frame-Options "SAMEORIGIN" 
+    Header set X-XSS-Protection "1; mode=block" 
+    Header set X-Content-Type-Options "nosniff" 
+    Header set X-Webkit-CSP "allow 'self'; media-src *; img-src *; font-src *; script-src 'self'; style-src 'self';" 
+    Header set X-Webkit-Content-Security-Policy "allow 'self'; media-src *; img-src *; font-src *; script-src 'self'; style-src 'self';"
+    Header set X-Content-Security-Policy "allow 'self'; media-src *; img-src *; font-src *; script-src 'self'; style-src 'self';"
+    Header set Content-Security-Policy "allow 'self'; media-src *; img-src *; font-src *; script-src 'self'; style-src 'self';"
+    Header set Set-Cookie HttpOnly;Secure
+    Header set Server Kaos
+    Header unset Cookie
+    #Header unset Set-Cookie
+</ifModule>

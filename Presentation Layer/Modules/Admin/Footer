@@ -1,0 +1,11 @@
+<?php
+    $required_js = array("js/jquery.min.js", "js/jput.min.js", "js/ui.js");
+
+    foreach($required_js as $keys => $indexs)
+    {
+       echo '
+        <script type="text/javascript" src="'.ADMIN_CDN.$indexs.'"></script>';
+    }
+?>
+</body>
+</html>

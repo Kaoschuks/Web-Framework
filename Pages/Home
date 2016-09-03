@@ -1,0 +1,8 @@
+        <ul>
+            <h2>Treanding</h2>
+            <li><a href="Trending" data-model="all" data-service="News" id="model">Trendng</a></li>
+            <li><a href="Technology" data-model="News" data-catgeory="Technology" >Technology</a></li>
+            <li><a href="Sports" data-model="News" data-catgeory="Sport">Sports</a></li>
+        </ul>
+        <div id="Technology"></div>
+        <div id="Sport"></div>
